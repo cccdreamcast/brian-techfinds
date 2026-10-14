@@ -32,8 +32,16 @@ h1{font-family:'InterTightX','InterX',sans-serif;font-weight:800;font-size:30px;
 h2{font-size:17px;font-weight:750;letter-spacing:-.01em;margin-top:3px;line-height:1.25}
 .line{color:var(--soft);font-size:14px;margin-top:4px;line-height:1.4}
 .row{display:flex;align-items:center;gap:10px;margin-top:10px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(180deg,#5b9dff,rgb(var(--a)));color:#fff;text-decoration:none;font-weight:750;font-size:15px;padding:10px 16px;border-radius:999px;box-shadow:0 8px 22px rgba(var(--a),.35)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:48px;background:linear-gradient(180deg,#5b9dff,rgb(var(--a)));color:#fff;text-decoration:none;font-weight:750;font-size:16px;padding:12px 20px;border-radius:999px;box-shadow:0 8px 22px rgba(var(--a),.35)}
 .btn:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.latest{margin-top:20px}
+.latest>h2.sec{font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:rgb(var(--a));margin:0 0 4px}
+.feat{padding:16px;margin-top:12px;border-radius:20px;background:linear-gradient(160deg,rgba(var(--a),.16),rgba(255,255,255,.04));border:1.5px solid rgba(var(--a),.45);display:grid;grid-template-columns:112px 1fr;gap:14px;align-items:center}
+.feat .thumb{width:112px;height:112px}.feat .thumb img{max-width:100px;max-height:100px}
+.bigbtn{grid-column:1/-1;display:flex;justify-content:center;align-items:center;gap:8px;width:100%;min-height:56px;font-size:18px;font-weight:800;color:#fff;text-decoration:none;border-radius:16px;background:linear-gradient(180deg,#5b9dff,rgb(var(--a)));box-shadow:0 10px 26px rgba(var(--a),.4)}
+.bigbtn:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.featpaid{grid-column:1/-1;text-align:center;font-size:12px;color:var(--muted);margin-top:-6px}
+.allh{font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--soft);margin:26px 0 0}
 .paid{font-size:12px;font-weight:800;color:#070A12;background:#fff;border-radius:6px;padding:3px 7px}
 .tm{grid-column:1/-1;font-size:11.5px;color:var(--muted);line-height:1.4}
 .empty{color:var(--muted);text-align:center;padding:30px 0}
@@ -49,7 +57,25 @@ footer h3{color:var(--soft);font-size:13px;margin:14px 0 4px}
   <p class="auto"><b>Automation disclosure:</b> Posts on my Instagram, TikTok and X accounts are prepared and scheduled with automation tools, and I review every post before it goes out.</p>
 </header>
 <input class="search" type="search" placeholder="Find a product from a post…" aria-label="Search products" oninput="f(this.value)">
-<main id="list">
+<section class="latest" aria-label="Latest from my posts"><h2 class="sec">Latest from my posts</h2>
+  <article class="feat" data-name="xbox wireless controller (carbon black) xbox wireless controller">
+    <div class="thumb"><img src="img/xbox-wireless-controller-carbon.webp" alt="Illustration of Xbox Wireless Controller" width="100" height="100"></div>
+    <div><div class="meta">New post</div><h2>Xbox Wireless Controller (Carbon Black)</h2><p class="line">Xbox Wireless Controller: Xbox Wireless, Bluetooth or USB-C; up to 40h on AA batteries (Microsoft).</p></div>
+    <a class="bigbtn" href="https://www.amazon.com/dp/B0F1HX3WXX?tag=brianc2486-20" rel="sponsored nofollow noopener" target="_blank">See it on Amazon &rarr;</a>
+    <p class="featpaid"><b>#ad</b> · Paid link to Amazon</p>
+  </article>
+  <article class="feat" data-name="amazon fire tv stick 4k select fire tv stick 4k select">
+    <div class="thumb"><img src="img/fire-tv-stick-4k-select.webp" alt="Illustration of Fire TV Stick 4K Select" width="100" height="100"></div>
+    <div><div class="meta">New post</div><h2>Amazon Fire TV Stick 4K Select</h2><p class="line">4K streaming stick with HDR10+ support, running Amazon&#x27;s Vega OS.</p></div>
+    <a class="bigbtn" href="https://www.amazon.com/dp/B0C6W3D4RM?tag=brianc2486-20" rel="sponsored nofollow noopener" target="_blank">See it on Amazon &rarr;</a>
+    <p class="featpaid"><b>#ad</b> · Paid link to Amazon</p>
+  </article>
+  <article class="feat" data-name="amazon echo dot (5th gen) echo dot (5th gen)">
+    <div class="thumb"><img src="img/echo-dot-5th-gen.webp" alt="Illustration of Echo Dot (5th Gen)" width="100" height="100"></div>
+    <div><div class="meta">New post</div><h2>Amazon Echo Dot (5th Gen)</h2><p class="line">Compact smart speaker with up to double the bass of the previous Dot, plus tap controls.</p></div>
+    <a class="bigbtn" href="https://www.amazon.com/dp/B09B8V1LZ3?tag=brianc2486-20" rel="sponsored nofollow noopener" target="_blank">See it on Amazon &rarr;</a>
+    <p class="featpaid"><b>#ad</b> · Paid link to Amazon</p>
+  </article></section><h2 class="allh">All products</h2><main id="list">
   <article class="card" id="tplink-archer-ax21" data-name="archer ax21 ax1800 wi-fi 6 router archer ax21 router">
     <div class="thumb"><img src="img/tplink-archer-ax21.webp" alt="Illustration of Archer AX21 Router" loading="lazy" width="84" height="84"></div>
     <div>
@@ -305,8 +331,8 @@ footer h3{color:var(--soft);font-size:13px;margin:14px 0 4px}
   <h3>About these links</h3>
   <p>As an Amazon Associate I earn from qualifying purchases. Products are listed with the same name used in the post. Prices and availability change: check the current details on Amazon. I don't list prices, ratings or deals here.</p>
   <h3>Privacy</h3>
-  <p>This page sets no cookies and runs no analytics. When you click a link to Amazon, Amazon (a third party) may place and read cookies in your browser and collect information about your visit, under Amazon's own privacy notice.</p>
-  <p style="margin-top:12px">Updated Oct 12, 2026 8:37 PM EDT</p>
+  <p>This page sets no cookies. It uses Cloudflare Web Analytics, a cookieless service that counts visits without identifying you or tracking you across sites. When you click a link to Amazon, Amazon (a third party) may place and read cookies in your browser and collect information about your visit, under Amazon's own privacy notice.</p>
+  <p style="margin-top:12px">Updated Oct 14, 2026 12:14 AM EDT</p>
 </footer>
 </div>
 <script>function f(q){q=q.toLowerCase().trim();document.querySelectorAll('.card').forEach(c=>{c.style.display=!q||c.dataset.name.includes(q)?'':'none'})}</script>
