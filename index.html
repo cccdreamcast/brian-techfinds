@@ -2,7 +2,7 @@
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Tech finds: links from my posts</title>
-<meta name="description" content="Links to the products featured in my Instagram, TikTok and X posts. As an Amazon Associate I earn from qualifying purchases.">
+<meta name="description" content="Links to the products featured in my Threads, Pinterest and YouTube posts. As an Amazon Associate I earn from qualifying purchases.">
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#070A12">
 <style>
@@ -24,8 +24,8 @@ h1{font-family:'InterTightX','InterX',sans-serif;font-weight:800;font-size:30px;
 .auto{margin-top:12px;font-size:13px;color:var(--muted);line-height:1.45}
 .search{margin:18px 0 6px;width:100%;padding:13px 16px;border-radius:12px;border:1.5px solid var(--line);background:rgba(255,255,255,.04);color:var(--fg);font:inherit;font-size:16px}
 .search::placeholder{color:var(--muted)}
-.card{display:grid;grid-template-columns:96px 1fr;gap:14px;align-items:center;padding:14px;margin-top:12px;border-radius:18px;background:var(--card);border:1.5px solid var(--line);scroll-margin-top:12px}
-.card:target{border-color:rgba(var(--a),.8);box-shadow:0 0 0 3px rgba(var(--a),.25)}
+.card{display:grid;grid-template-columns:96px 1fr;gap:14px;align-items:center;padding:14px;margin-top:12px;border-radius:18px;background:var(--card);border:1.5px solid var(--line);scroll-margin-top:18px}
+.card:target,.card.is-target,.feat.is-target{border-color:#3D8BFF;box-shadow:0 0 0 6px #3D8BFF}
 .thumb{width:96px;height:96px;border-radius:14px;display:grid;place-items:center;background:radial-gradient(closest-side,rgba(var(--a),.28),rgba(var(--a),.04));position:relative}
 .thumb img{max-width:84px;max-height:84px;filter:drop-shadow(0 8px 14px rgba(0,0,0,.45))}
 .meta{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgb(var(--a))}
@@ -36,7 +36,7 @@ h2{font-size:17px;font-weight:750;letter-spacing:-.01em;margin-top:3px;line-heig
 .btn:focus-visible{outline:3px solid #fff;outline-offset:2px}
 .latest{margin-top:20px}
 .latest>h2.sec{font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:rgb(var(--a));margin:0 0 4px}
-.feat{padding:16px;margin-top:12px;border-radius:20px;background:linear-gradient(160deg,rgba(var(--a),.16),rgba(255,255,255,.04));border:1.5px solid rgba(var(--a),.45);display:grid;grid-template-columns:112px 1fr;gap:14px;align-items:center}
+.feat{padding:16px;margin-top:12px;border-radius:20px;background:linear-gradient(160deg,rgba(var(--a),.16),rgba(255,255,255,.04));border:1.5px solid rgba(var(--a),.45);display:grid;grid-template-columns:112px 1fr;gap:14px;align-items:center;scroll-margin-top:18px}
 .feat .thumb{width:112px;height:112px}.feat .thumb img{max-width:100px;max-height:100px}
 .bigbtn{grid-column:1/-1;display:flex;justify-content:center;align-items:center;gap:8px;width:100%;min-height:56px;font-size:18px;font-weight:800;color:#fff;text-decoration:none;border-radius:16px;background:linear-gradient(180deg,#5b9dff,rgb(var(--a)));box-shadow:0 10px 26px rgba(var(--a),.4)}
 .bigbtn:focus-visible{outline:3px solid #fff;outline-offset:2px}
@@ -55,7 +55,7 @@ footer h3{color:var(--soft);font-size:13px;margin:14px 0 4px}
 <header>
   <div class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></svg></div>
   <h1>Tech finds</h1>
-  <p class="tagline">Gadgets I&#x27;ve featured on Instagram, TikTok and X.</p>
+  <p class="tagline">Gadgets I&#x27;ve featured on Threads, Pinterest and YouTube.</p>
   <p class="auto"><b>Automation disclosure:</b> Posts on my Instagram, TikTok and X accounts are prepared and scheduled with automation tools, and I review every post before it goes out.</p>
 </header>
 <input class="search" type="search" placeholder="Find a product from a post…" aria-label="Search products" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" value="" oninput="f(this.value)">
@@ -945,7 +945,7 @@ footer h3{color:var(--soft);font-size:13px;margin:14px 0 4px}
   <p>As an Amazon Associate I earn from qualifying purchases. Products are listed with the same name used in the post. Prices and availability change: check the current details on Amazon. I don't list prices, ratings or deals here.</p>
   <h3>Privacy</h3>
   <p>This page sets no cookies. It uses Cloudflare Web Analytics and GoatCounter, privacy-friendly cookieless counters, to count page visits and clicks on product buttons without identifying you or tracking you across sites. If you arrive from one of my profiles (Instagram, Pinterest or Threads), the page remembers which one for this browser tab only, in session storage, so the visit and any Amazon click are counted under that source. When you click a link to Amazon, Amazon (a third party) may place and read cookies in your browser and collect information about your visit, under Amazon's own privacy notice.</p>
-  <p style="margin-top:12px">Updated Nov 18, 2026 11:03 AM EST</p>
+  <p style="margin-top:12px">Updated Nov 25, 2026 9:53 PM EST</p>
 </footer>
 </div>
 <script>
@@ -967,14 +967,25 @@ function clearSearch(){
   s.value='';
   f('');
 }
-clearSearch();
-window.addEventListener('pageshow',clearSearch);
-(function(){
+function highlightAnchor(){
+  document.querySelectorAll('.is-target').forEach(function(el){el.classList.remove('is-target')});
   var id=(location.hash||'').replace(/^#/,'');
-  if(!id||document.body.classList.contains('is-searching'))return;
-  var feat=document.querySelector('.feat[data-slug="'+CSS.escape(id)+'"]');
-  if(feat)feat.scrollIntoView({block:'start'});
-})();
+  if(!id)return;
+  var card=null, feat=null;
+  try{
+    card=document.getElementById(id);
+    feat=document.querySelector('.feat[data-slug="'+CSS.escape(id)+'"]');
+  }catch(e){return;}
+  if(card)card.classList.add('is-target');
+  if(feat)feat.classList.add('is-target');
+  if(document.body.classList.contains('is-searching'))return;
+  var dest=feat||card;
+  if(dest)dest.scrollIntoView({block:'start'});
+}
+clearSearch();
+highlightAnchor();
+window.addEventListener('pageshow',function(){clearSearch();highlightAnchor();});
+window.addEventListener('hashchange',highlightAnchor);
 </script>
 <script>(function(){
 var SRC={"ig": "Instagram", "pin": "Pinterest", "thr": "Threads"},TAGS={"ig": "brianc2486-ig-20", "pin": "brianc2486-pin-20", "thr": "brianc2486-thr-20"},ref=null;
