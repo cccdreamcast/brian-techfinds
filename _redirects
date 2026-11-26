@@ -1,0 +1,3 @@
+# Path-only short links (Pinterest strips ?query from the profile website field)
+/pin /?ref=pin 302
+/pin/ /?ref=pin 302
